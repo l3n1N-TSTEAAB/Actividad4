@@ -5,9 +5,10 @@ def Menu():
     print("3. SALIR")
 def MenuPacientes():
     print("MENU - PACIENTES")
-    print("1. AGREGAR - PACIENTES")
-    print("2. MOSTRAR - PACIENTES")
-    print("3. SALIR")
+    print("1. REGISTRAR NUEVO CLIENTE")
+    print("2. ATENDER PACIENTE")
+    print("3. MOSTRAR PACIENTE")
+    print("4. REGRESAR AL MENU")
 
 class Pacientes():
     def __init__(self, nombre, dpi, edad, padecimiento):
@@ -22,6 +23,7 @@ def get_paciente(self):
 
 
 opcion = 0
+opcion2 = 0
 PilaPacientes = []
 while opcion != 3:
     opcion = 0
@@ -29,6 +31,11 @@ while opcion != 3:
     opcion = int(input("OPCION A ELEGIR: "))
     match (opcion):
         case 1:
+            while(opcion2 !=4):
+              opcion2 = int(input("OPCION A ELEGIR: "))
+              MenuPacientes()
+
+
             print("AGREGAR NUEVOS PACIENTES")
             nombre = input("NOMBRE: ")
             dpi = input("DPI: ")
@@ -37,6 +44,10 @@ while opcion != 3:
             pacienteNuevo = Pacientes(nombre, dpi, edad, padecimiento)
             PilaPacientes.append(pacienteNuevo)
         case 2:
+            print("ATENDER PACIENTES")
+            PilaPacientes.remove(0)
+
+        case 3:
     print("MOSTRAR PACIENTES")
     for paciente in PilaPacientes:
         print(paciente.get_paciente())
