@@ -1,2 +1,1 @@
 print("--- FARMACIA ---")
-print("--- <NAME> ---")
