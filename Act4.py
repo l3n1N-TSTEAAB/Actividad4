@@ -1,5 +1,5 @@
 ##MENU
- def Menu():
+def Menu():
    print("MENU - FARMACIA")
    print("1. RECEPCION - CLIENTES")
    print("2. AGREGAR - MEDICAMENTOS")
