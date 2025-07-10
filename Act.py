@@ -25,6 +25,13 @@ while opcion != 3:
    match(opcion):
        case 1:
           print("AGREGAR NUEVOS PACIENTES")
+          nombre = input("NOMBRE: ")
+          dpi = input("DPI: ")
+          edad = input("EDAD: ")
+          padecimiento = input("PADECIMENTO: ")
+          pacienteNuevo = Pacientes(nombre, dpi, edad, padecimiento)
+          PilaPacientes.append(pacienteNuevo)
+
 
 
 
