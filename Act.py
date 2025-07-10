@@ -7,4 +7,8 @@ def Menu():
    print("OPCION A ELEGIR: ")
 
    def Pacientes():
-      print()
+      def __init__(self,nombre, dpi, edad, padecimiento):
+         self.__nombre = nombre
+         self.__dpi = dpi
+         self.__edad = edad
+         self.__padecimiento = padecimiento
