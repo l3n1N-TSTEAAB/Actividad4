@@ -32,25 +32,26 @@ while opcion != 3:
     match (opcion):
         case 1:
             while(opcion2 !=4):
-              opcion2 = int(input("OPCION A ELEGIR: "))
+              opcion = 0
               MenuPacientes()
-
-
-            print("AGREGAR NUEVOS PACIENTES")
-            nombre = input("NOMBRE: ")
-            dpi = input("DPI: ")
-            edad = input("EDAD: ")
-            padecimiento = input("PADECIMENTO: ")
-            pacienteNuevo = Pacientes(nombre, dpi, edad, padecimiento)
-            PilaPacientes.append(pacienteNuevo)
+            opcion2 = int(input("OPCION A ELEGIR: "))
+            match (opcion2):
+                case 1:
+                   print("AGREGAR NUEVOS PACIENTES")
+                   nombre = input("NOMBRE: ")
+                   dpi = input("DPI: ")
+                   edad = input("EDAD: ")
+                   padecimiento = input("PADECIMENTO: ")
+                   pacienteNuevo = Pacientes(nombre, dpi, edad, padecimiento)
+                   PilaPacientes.append(pacienteNuevo)
         case 2:
             print("ATENDER PACIENTES")
             PilaPacientes.remove(0)
 
         case 3:
-    print("MOSTRAR PACIENTES")
-    for paciente in PilaPacientes:
-        print(paciente.get_paciente())
+          print("MOSTRAR PACIENTES")
+          for paciente in PilaPacientes:
+           print(paciente.get_paciente())
 
 
 
