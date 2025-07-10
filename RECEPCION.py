@@ -51,15 +51,26 @@ while opcion != 3:
                    padecimiento = input("PADECIMENTO: ")
                    pacienteNuevo = Pacientes(nombre, dpi, edad, padecimiento)
                    PilaPacientes.append(pacienteNuevo)
-        case 2:
-            print("ATENDER PACIENTES")
-            PilaPacientes.remove(0)
+                case 2:
+                   print("ATENDER PACIENTES")
+                   PilaPacientes.remove(0)
 
-        case 3:
-          print("MOSTRAR PACIENTES")
-          for paciente in PilaPacientes:
-           print(paciente.get_paciente())
-    case 2:
+                case 3:
+                   print("MOSTRAR PACIENTES")
+                   for paciente in PilaPacientes:
+                     print(paciente.get_paciente())
+        case 2:
+            opcionM = 0
+            MenuMed()
+            opcionM = int(input("OPCION A ELEGIR: "))
+            match (opcionM):
+                case 1:
+                    agregar_medicamento()
+                case 2:
+                    entregar_medicamento()
+                case 3:
+                    mostrar_medicamentos()
+
 
 
 
