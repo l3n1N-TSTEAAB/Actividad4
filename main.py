@@ -31,6 +31,8 @@ while opcion != 3:
           padecimiento = input("PADECIMENTO: ")
           pacienteNuevo = Pacientes(nombre, dpi, edad, padecimiento)
           PilaPacientes.append(pacienteNuevo)
+       case 2:
+
 
 
 
