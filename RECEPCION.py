@@ -10,6 +10,13 @@ def MenuPacientes():
     print("3. MOSTRAR PACIENTE")
     print("4. REGRESAR AL MENU")
 
+def MenuMed():
+    print("MENU - MEDICAMENTO")
+    print("1. REGISTRAR NUEVO MEDICAMENTO")
+    print("2. ENTREGAR MEDICAMENTO")
+    print("3. MOSTRAR MEDICAMENTOS")
+    print("4. REGRESAR AL MENU")
+
 class Pacientes():
     def __init__(self, nombre, dpi, edad, padecimiento):
         self.__nombre = nombre
@@ -52,6 +59,8 @@ while opcion != 3:
           print("MOSTRAR PACIENTES")
           for paciente in PilaPacientes:
            print(paciente.get_paciente())
+    case 2:
+
 
 
 
