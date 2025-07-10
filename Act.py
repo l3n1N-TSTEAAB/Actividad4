@@ -10,6 +10,9 @@ class Pacientes():
          self.__dpi = dpi
          self.__edad = edad
          self.__padecimiento = padecimiento
+def get_paciente(self):
+   return f"NOMBRE: {self.__nombre} DPI: {self.__dpi} EDAD: {self.__edad} PADECIMENTO: {self.__padecimento}"
+
 
 
 
@@ -19,4 +22,9 @@ while opcion != 3:
    opcion = 0
    Menu()
    opcion = int(input("OPCION A ELEGIR: "))
+   match(opcion):
+       case 1:
+          print("AGREGAR NUEVOS PACIENTES")
+
+
 
