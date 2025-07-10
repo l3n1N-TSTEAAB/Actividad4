@@ -3,7 +3,11 @@ def Menu():
     print("1. RECEPCION - CLIENTES")
     print("2. AGREGAR - MEDICAMENTOS")
     print("3. SALIR")
-
+def MenuPacientes():
+    print("MENU - PACIENTES")
+    print("1. AGREGAR - PACIENTES")
+    print("2. MOSTRAR - PACIENTES")
+    print("3. SALIR")
 
 class Pacientes():
     def __init__(self, nombre, dpi, edad, padecimiento):
@@ -33,4 +37,9 @@ while opcion != 3:
             pacienteNuevo = Pacientes(nombre, dpi, edad, padecimiento)
             PilaPacientes.append(pacienteNuevo)
         case 2:
+    print("MOSTRAR PACIENTES")
+    for paciente in PilaPacientes:
+        print(paciente.get_paciente())
+
+
 
