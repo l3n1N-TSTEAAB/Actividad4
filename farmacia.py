@@ -11,8 +11,9 @@ class Medicamento:
 
 listaMedicamentos = []
 
-def agregarMedicamento():
+def agregar_medicamento():
     nombre = input("Ingresa el nombre del medicamento: ")
+    dosis = ""
     while True:
         try:
             dosis = int(input("Ingresa la dosis del medicamento (gramos): "))
@@ -21,6 +22,7 @@ def agregarMedicamento():
             print("El valor es incorrecto")
     presentacion = input("Ingresa la presentacion del medicamento: ")
     receta_requerida = input("El medicamento requiere receta medica?(Si,No): ")
+    precio = ""
     while True:
         try:
             precio = int(input("Ingresa la precio del medicamento: "))
@@ -28,9 +30,14 @@ def agregarMedicamento():
         except ValueError:
             print("El valor es incorrecto")
 
-    nuevoMedicamento = Medicamento(nombre, dosis, presentacion, receta_requerida, precio)
-    listaMedicamentos.append(nuevoMedicamento)
+    nuevo_medicamento = Medicamento(nombre, dosis, presentacion, receta_requerida, precio)
+    listaMedicamentos.append(nuevo_medicamento)
 
-def mostrarMedicamentos():
+def mostrar_medicamentos():
+    print("\nMOSTRANDO MEDICAMENTOS:")
     for medicamento in listaMedicamentos:
         print(medicamento.get_medicamento())
+
+def entregar_medicamento():
+    print("ENTREGANDO MEDICAMENTO")
+    listaMedicamentos.pop()
